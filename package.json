@@ -1,0 +1,22 @@
+{
+  "name": "Extramarks-App",
+  "version": "0.0.1",
+  "description": "Extramarks Application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/amirrajan/nodejs-chat.git"
+  },
+  "dependencies": {
+   "express" : "~4.5.1",
+        "body-parser" : "~1.4.2",
+        "method-override" : "~2.0.2"
+  },
+  "subdomain": "amirrajan-nodejs-chat",
+  "engines": {
+    "node": ">=0.10.x"
+  }
+}

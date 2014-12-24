@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Extramarks</title>
+<link href="<%= siteUrl %>/public/css/extramark.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+
+<div id="bannerContainer">
+	<div class="aboutusContainer">
+
+			<div class="repository_heading" ><h1>Extramarks Services</h1></div>
+			<!-- div style="float:right;">
+			<a href="javascript:;">1</a>
+			<a href="javascript:;">2</a>
+			<a href="javascript:;">3</a>
+			<a href="javascript:;">4</a>
+			<a href="javascript:;">5</a>
+			
+			
+			</div -->
+			
+			<div class="lHeight30">&nbsp;</div>
+            <ul class="repository_services2">
+            <% for(var i=0; i< 6; i++) { %>
+            <li>
+            <a href="/sitemap/board-list/<%= services[i].service_id %>">
+            <span><img src="<%= siteUrl %>/public/images/repository_images/425.png" alt="Contact" /></span>
+            <p class="service-name"><%= services[i].service_name%></p>
+            </a>
+            </li>
+             <% }; %>
+           
+            <li><a title="Product Tour" class="hlearn brand" href="http://www.extramarks.com/product-tour" target="_blank"><img width="19" height="19" alt="know more" src="../public/images/ban-mr.png">Product Tour</a>
+            <a title="Know More" style="margin-left:10px;" class="hlearn brand" href="http://www.extramarks.com/easy-effective" target="_blank"><img width="19" height="19" alt="know more" src="../public/images/ban-mr.png">Learn How</a>
+            <div class="clear"></div>
+            <a title="Register Now for a Free Trial" class="hlearn brand" href="http://www.extramarks.com/user/register" target="_blank" style="min-width:249px"><img width="19" height="19" alt="know more" src="../public/images/ban-mr.png">Register Now for a Free Trial</a>
+            </li>
+            
+            </ul>
+  
+<div class="lHeight30">&nbsp;</div>
+ <img src="<%= siteUrl %>/public/images/repository_images/banner-image.png" alt="Contact" align="right" style="margin-right:30px;" />
+		
+		<ul class="repository_content">
+        <li>Freedom to study at your own space and pace.</li>
+        <li>Three pronged approach of 'Learn', 'Practice' and 'Test' to fulfill all study requirements.</li>
+        <li>Continuity of concepts from school to home. Your Anytime-Anywhere Flip class</li>
+        <li>Covers entire curriculum for classes Nursery to XII.</li>
+        <li>The learning modules are adopted by over 5000 schools in India and abroad.</li>
+        <li>Get connected to your friends, parents or mentor/ teachers.</li>
+        <li>Make your own study schedules and review your performance.</li>
+        </ul>
+       <div class="clear"></div>
+        
+        
+        
+        <div class="repository_callus">	<img src="<%= siteUrl %>/public/images/repository_images/contact-us-icon2.png" alt="Contact" /> Call Us!! 1800- 102-5301</div>
+		
+		
+	</div>
+</div>
+<!-- script type="text/javascript">
+$(document).ready(function() {
+	 $(".nav-collapse li#about_us").addClass("active");
+});
+</script -->
+</body>
+</html>

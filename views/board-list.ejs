@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+*{margin:0px; padding:0px;}
+body{background:#ededed;}
+.bimg{text-align:center; padding:10px;}
+.bimg img{width:200px;}
+.head{width:100%; height:100px; margin:0 0 20px 0; text-align:center; background:#fff; border-bottom:1px solid #b7b7b7;}
+.boardList_container{background:#fff; width:480px; margin:auto; padding:20px; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#222; font-weight:bold; border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px; box-shadow:0 0 2px #bbb; -webkit-box-shadow:0 0 2px #bbb; -moz-box-shadow:0 0 2px #bbb;} 
+.boardListing{ margin:0px; padding:0px; list-style:none;}
+.boardListing li{ padding-bottom:15px;}
+.boardListing li label{ display:inline-block; width:100px;}
+.boardListing li .boardSelect{ display:inline-block; width:380px; padding:5px;  box-shadow:0 0 2px #ccc; -webkit-box-shadow:0 0 2px #ccc; -moz-box-shadow:0 0 2px #ccc;}
+.selectboardListingHeading{ float:left; width:100px; font-size:15px; font-family:arial;}
+.selectboardListing{ float:right; width:350px; paddong:5px; margin:0px; list-style:none;}
+.selectboardListing li{ }
+.selectboardListing li a{ border-bottom:1px solid #ddd; padding:5px 0 5px 0; display:block; color:#2c6085; text-decoration:none;}
+.selectboardListing li a:hovert{ background:#ddd;}
+</style>
+</head>
+
+<body>
+<div class="head"><img src="<%= siteUrl %>/public/images/repository_images/extramarks-logo.png"></div>
+<div class="boardList_container">
+<div class="selectboardListingHeading">Select Board:</div>
+<ul class="selectboardListing">
+ <% for(var i=0; i< boardList.length; i++) { %>
+<li><a href="/sitemap/<%= boardList[i].name %>/<%= boardList[i].rack_id %>"><%= boardList[i].name %></a></li>
+ <% } %>
+
+</ul>
+
+<div class="bimg">
+<img style="margin-top:20px;" src="<%= siteUrl %>/public/images/repository_images/banner-image1.png">
+</div>
+</div>
+</body>
+</html>

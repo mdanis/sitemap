@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="<%= siteUrl %>/public/css/extramark.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+
+<div id="bannerContainer" class="bannerContainer_sitemap">
+  <div class="aboutusContainer">
+  
+  <div style="width:100%;">
+<div style="border-bottom:1px solid #ddd; padding-bottom:10px; margin-bottom:10px; width:50%;  float:left;">
+	<h1 style="text-align:center; width:100%;" class="crisp-splash-header">CBSE</h1>
+        <div class="clear">&nbsp;</div>
+    </div>
+	
+	<div style="border-bottom:1px solid #ddd; padding-bottom:10px; margin-bottom:10px; width:50%; float:left;">
+	<h1 style="text-align:center; width:100%;" class="crisp-splash-header">ICSE</h1>
+        <div class="clear">&nbsp;</div>
+    </div>
+	</div>
+     
+      <div class="crisp-g" style="width:50%; float:left;">
+        <% for (var key in subjectList.CBSE){ %>
+        <% for (var key1 in subjectList.CBSE[key]){ 
+        
+        %>
+        <!--if(subjectList.CBSE[key][key1].class_name != 'XI' && subjectList.CBSE[key][key1].class_name != 'VIII'){--> 
+      <div class="crisp-u-1-3" style="width:49%;">
+      <h2 class="skill-tree-skills-header">Class - <%= subjectList.CBSE[key][key1].class_name %></h2>
+		 <ul class="skill-tree-skills">
+             <% for (var key2 in subjectList.CBSE[key][key1].subject){ %>
+                <li class="skill-tree-skill-node">
+                <a href="<%= redirectSiteUrl %>/website/index/dashboard/<%= subjectList.CBSE[key][key1].class_id %>#/<%= serviceType %>/<%= subjectList.CBSE[key][key1].subject[key2].chapter %>/<%= serviceId %>" target="_blank">
+                <span class="skill-tree-skill-name"><%= subjectList.CBSE[key][key1].subject[key2].subject_name %></span>
+                </a>
+                </li>
+                <% } %>
+              
+        </ul>
+        
+            
+      </div>
+       <% } }%>
+       
+      </div>
+      
+      <div class="crisp-g" style="width:50%; float:left;">
+       <% for (var key in subjectList.ICSE){ %>
+        <% for (var key1 in subjectList.ICSE[key]){ 
+        %>
+        <!-- if(subjectList.ICSE[key][key1].class_name != 'XI' && subjectList.ICSE[key][key1].class_name != 'VIII'){ %> -->
+      <div class="crisp-u-1-3" style="width:49%;">
+      <h2 class="skill-tree-skills-header">Class - <%= subjectList.ICSE[key][key1].class_name %></h2>
+		 <ul class="skill-tree-skills">
+             <% for (var key2 in subjectList.ICSE[key][key1].subject){ %>
+                <li class="skill-tree-skill-node">
+                <a href="<%= redirectSiteUrl %>/website/index/dashboard/<%= subjectList.ICSE[key][key1].class_id %>#/<%= serviceType %>/<%= subjectList.ICSE[key][key1].subject[key2].chapter %>/<%= serviceId %>" target="_blank">
+                <span class="skill-tree-skill-name"><%= subjectList.ICSE[key][key1].subject[key2].subject_name %></span>
+                </a>
+                </li>
+                <% } %>
+              
+        </ul>
+        
+            
+      </div>
+       <% } }  %>
+      
+      
+      </div>  
+      
+     <p style="font-size:11px;clear:both;"><strong>Note</strong>: All Contents are Dynamic</p>
+    <div class="clear">&nbsp;</div>
+  </div>
+</div>
+</body>
+</html>
